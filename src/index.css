@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem; /* For fixed header */
+  }
+
+  body {
+    @apply transition-colors duration-500 font-sans;
+    background-color: theme('colors.light.bg');
+    color: theme('colors.light.text');
+  }
+  .dark body {
+    background-color: theme('colors.dark.bg');
+    color: theme('colors.dark.text');
+  }
+  ::selection {
+    background: theme('colors.accent.blue');
+    color: #fff;
+  }
+  a {
+    @apply transition-colors duration-200 underline-offset-2;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent-blue rounded-full;
+  }
+
+}
+
+@layer components {
+  .bg-section {
+    @apply bg-light-surface dark:bg-dark-surface;
+  }
+  .bg-hero-section {
+    background-image: theme('backgroundImage.hero-light');
+  }
+  .dark .bg-hero-section {
+    background-image: theme('backgroundImage.hero-dark');
+  }
+  .glass {
+    @apply backdrop-blur-xl bg-white/50 dark:bg-dark-surface/80 border border-light-border dark:border-dark-border rounded-2xl shadow-card;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 tracking-tight select-none transition-colors duration-500;
+    color: theme('colors.accent.blue');
+  }
+  .section-title span {
+    @apply text-accent-purple;
+  }
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 py-16 md:py-24;
+  }
+  .card {
+    @apply bg-white dark:bg-dark-surface border border-light-border dark:border-dark-border p-6 rounded-xl shadow-card transition-all;
+  }
+  .nav-active {
+    color: theme('colors.accent.blue');
+    border-bottom: 2px solid theme('colors.accent.blue');
+  }
+  .btn-primary {
+    @apply bg-accent-blue hover:bg-accent-purple text-white font-semibold px-6 py-2 rounded-lg shadow transition-all duration-200 inline-flex justify-center min-w-[160px] text-center;
+  }
+  .btn-outline {
+    @apply border-2 border-accent-blue text-accent-blue hover:bg-accent-purple hover:text-white px-6 py-2 rounded-lg transition-all duration-200 inline-flex justify-center min-w-[160px] text-center;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-light-surface border border-light-border dark:bg-dark-surface dark:border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-accent-blue transition-all;
+    color: theme('colors.light.text');
+  }
+  .dark .input-field {
+    color: theme('colors.dark.text');
+  }
+  .scroll-indicator {
+    @apply animate-bounce text-accent-blue opacity-60;
+  }
+  .progress-bar {
+    --progress-width: 0%;
+    animation: progressAnimation 1.5s ease-out forwards;
+  }
+  .nav-link {
+    @apply cursor-pointer;
+  }
+
+  /* Scroll Down Button */
+  .scroll-down-btn {
+    @apply cursor-pointer inline-flex flex-col items-center p-2 rounded-full transition-all;
+    @apply hover:bg-light-surface/30 dark:hover:bg-dark-surface/30;
+  }
+
+  .scroll-arrow {
+    @apply text-accent-blue transition-colors duration-300;
+    @apply hover:text-accent-purple;
+    animation: pulse 2s infinite;
+  }
+}
+
+/* Custom scroll behavior for JS */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    transition: scroll 0.4s ease;
+  }
+}
+
+/* Background gradient utility */
+.bg-main-gradient {
+  background-image: linear-gradient(135deg, #7c3aed 0%, #2563eb 67%, #38bdf8 100%);
+}
+
+/* Font gradient utility */
+.font-gradient {
+  background: linear-gradient(to right, #7c3aed, #2563eb 55%, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Code animation styles */
+.code-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.code-line {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.code-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(79, 70, 229, 0.2);
+  animation: code-type 2s steps(40) forwards;
+}
+
+@keyframes code-type {
+  to {
+    width: 100%;
+  }
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #2563eb }
+}
+
+/* Floating animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Progress bar animation */
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width);
+  }
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for scroll down */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add cursor pointer to all interactive elements */
+a, button, .cursor-pointer, [role="button"] {
+  cursor: pointer;
+}
