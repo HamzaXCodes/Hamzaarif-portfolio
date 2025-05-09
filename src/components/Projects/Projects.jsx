@@ -42,8 +42,8 @@ const Projects = () => {
         "A WhatsApp-inspired chat application with real-time messaging functionality.",
       image: "/whatsapp.png",
       technologies: ["React.js", "Firebase", "CSS3", "WebSockets"],
-      demoUrl: "https://whatsconnect.netlify.app/",
-      githubUrl: "https://github.com/HamzaXCodes/WhatsApp-",
+      demoUrl: "https://whatsapp-clone-lac.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/WhatsApp-chatbox-clone",
     },
     {
       id: "devics",
