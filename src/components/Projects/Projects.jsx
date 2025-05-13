@@ -26,6 +26,16 @@ const Projects = () => {
       githubUrl: "https://github.com/HamzaXCodes/100xelevate",
     },
     {
+      id: "to-do",
+      title: "To-do APP",
+      description:
+        "Organize tasks, set reminders, and boost productivity with a simple, intuitive to-do list app.",
+      image: "/todo.png",
+      technologies: ["React.js", "TailwindCSS", "JavaScript"],
+      demoUrl: "https://to-do-app-work.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/To-do-App",
+    },
+    {
       id: "ecommerce",
       title: "E-commerce Website",
       description:
