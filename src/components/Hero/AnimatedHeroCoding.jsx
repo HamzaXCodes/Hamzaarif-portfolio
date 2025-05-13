@@ -267,20 +267,20 @@ const AnimatedHeroCoding = () => {
     <div className="relative w-full max-w-lg mx-auto">
       {/* Main browser window/frame container */}
       <motion.div
-        className="glass overflow-hidden w-full rounded-xl shadow-lg"
+        className="w-full overflow-hidden shadow-lg glass rounded-xl"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Browser header bar */}
-        <div className="bg-light-surface dark:bg-dark-surface p-3 flex items-center gap-2 border-b border-light-border dark:border-dark-border">
+        <div className="flex items-center gap-2 p-3 border-b bg-light-surface dark:bg-dark-surface border-light-border dark:border-dark-border">
           <div className="flex space-x-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-500" />
-            <div className="w-3 h-3 rounded-full bg-yellow-400" />
-            <div className="w-3 h-3 rounded-full bg-green-500" />
+            <div className="w-3 h-3 bg-red-500 rounded-full" />
+            <div className="w-3 h-3 bg-yellow-400 rounded-full" />
+            <div className="w-3 h-3 bg-green-500 rounded-full" />
           </div>
           <div className="flex-1 mx-2">
-            <div className="bg-light-border dark:bg-dark-border rounded-md py-1 px-3 text-xs text-center text-light-subtle dark:text-dark-subtle truncate">
+            <div className="px-3 py-1 text-xs text-center truncate rounded-md bg-light-border dark:bg-dark-border text-light-subtle dark:text-dark-subtle">
               hamza-portfolio.dev
             </div>
           </div>
@@ -289,11 +289,11 @@ const AnimatedHeroCoding = () => {
         {/* Browser content area */}
         <div className="bg-frosted-glass relative h-[200px] sm:h-[300px] overflow-hidden dark:bg-dark-bg/40">
           {/* Code snippets floating inside */}
-          <div className="relative w-full h-full flex flex-col items-center justify-center">
+          <div className="relative flex flex-col items-center justify-center w-full h-full">
             {CodeElements.map((element, i) => (
               <motion.div
                 key={element.id}
-                className="absolute px-2 py-1 bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm border border-light-border dark:border-dark-border rounded-lg shadow-lg"
+                className="absolute px-2 py-1 border rounded-lg shadow-lg bg-white/90 dark:bg-dark-surface/90 backdrop-blur-sm border-light-border dark:border-dark-border"
                 style={{
                   zIndex: 10 - i,
                   maxWidth: "90%",
