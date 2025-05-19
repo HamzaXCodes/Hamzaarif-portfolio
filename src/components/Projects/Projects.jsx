@@ -26,6 +26,16 @@ const Projects = () => {
       githubUrl: "https://github.com/HamzaXCodes/100xelevate",
     },
     {
+      id: "text-to-speech",
+      title: "Text to Speech",
+      description:
+        "Convert text to natural-sounding speech instantly with our easy, fast, and user-friendly TTS app.",
+      image: "/speech.png",
+      technologies: ["React.js", "TailwindCSS", "JavaScript"],
+      demoUrl: "https://text-speech-tool.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/text-speech-tool",
+    },
+    {
       id: "to-do",
       title: "To-do APP",
       description:
