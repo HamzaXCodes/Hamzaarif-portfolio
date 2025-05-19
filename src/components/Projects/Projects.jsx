@@ -36,6 +36,16 @@ const Projects = () => {
       githubUrl: "https://github.com/HamzaXCodes/text-speech-tool",
     },
     {
+      id: "ecommerce",
+      title: "E-commerce Website",
+      description:
+      "A fully responsive e-commerce website with product listings, cart functionality, and user authentication.",
+      image: "/watch.png",
+      technologies: ["React.js", "Redux", "TailwindCSS", "Stripe API"],
+      demoUrl: "https://watchshopweb.netlify.app/",
+      githubUrl: "https://github.com/HamzaXCodes/WatchShop",
+    },
+    {
       id: "to-do",
       title: "To-do APP",
       description:
@@ -44,16 +54,6 @@ const Projects = () => {
       technologies: ["React.js", "TailwindCSS", "JavaScript"],
       demoUrl: "https://to-do-app-work.vercel.app/",
       githubUrl: "https://github.com/HamzaXCodes/To-do-App",
-    },
-    {
-      id: "ecommerce",
-      title: "E-commerce Website",
-      description:
-        "A fully responsive e-commerce website with product listings, cart functionality, and user authentication.",
-      image: "/watch.png",
-      technologies: ["React.js", "Redux", "TailwindCSS", "Stripe API"],
-      demoUrl: "https://watchshopweb.netlify.app/",
-      githubUrl: "https://github.com/HamzaXCodes/WatchShop",
     },
     {
       id: "whatsapp",
