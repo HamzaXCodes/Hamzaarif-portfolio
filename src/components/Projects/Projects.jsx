@@ -6,6 +6,16 @@ const Projects = () => {
 
   const projects = [
     {
+      id: "instagram",
+      title: "Instagram Video Downloader",
+      description:
+        "Download Instagram videos easily in high quality with our fast, free, and user-friendly downloader tool.",
+      image: "/insta.png",
+      technologies: ["React.js", "Tailwind", "JavaScript"],
+      demoUrl: "https://instagram-video-downloader-bice.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/Instagram-video-downloader",
+    },
+    {
       id: "converter",
       title: "Image Converter Tool",
       description:
