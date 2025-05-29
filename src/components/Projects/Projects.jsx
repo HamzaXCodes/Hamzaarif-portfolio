@@ -29,7 +29,7 @@ const Projects = () => {
       id: "youtube",
       title: "Youtube to Mp4",
       description:
-        "Download Instagram videos easily in high quality with our fast, free, and user-friendly downloader tool.",
+        "Download YouTube videos as MP4 files instantly with our fast, free, and easy-to-use tool.",
       image: "/youtubemp4.png",
       technologies: ["React.js", "Tailwind", "JavaScript"],
       demoUrl: "https://instagram-video-downloader-bice.vercel.app/",
