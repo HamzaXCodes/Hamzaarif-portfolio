@@ -15,6 +15,26 @@ const Projects = () => {
       demoUrl: "https://instagram-video-downloader-bice.vercel.app/",
       githubUrl: "https://github.com/HamzaXCodes/Instagram-video-downloader",
     },
+      {
+      id: "shopify",
+      title: "100xElevate Shopify Agency",
+      description:
+        "A landing page for a Shopify development agency with smooth animations and mobile-friendly design.",
+      image: "/100xelevate.png",
+      technologies: ["React.js", "TailwindCSS", "Framer Motion", "GSAP"],
+      demoUrl: "https://100xelevate.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/100xelevate",
+    },
+    {
+      id: "youtube",
+      title: "Youtube to Mp4",
+      description:
+        "Download Instagram videos easily in high quality with our fast, free, and user-friendly downloader tool.",
+      image: "/youtubemp4.png",
+      technologies: ["React.js", "Tailwind", "JavaScript"],
+      demoUrl: "https://instagram-video-downloader-bice.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/Instagram-video-downloader",
+    },
     {
       id: "converter",
       title: "Image Converter Tool",
@@ -25,16 +45,7 @@ const Projects = () => {
       demoUrl: "https://image-converter-tool-seven.vercel.app/",
       githubUrl: "https://github.com/HamzaXCodes/Image-Converter-Tool",
     },
-    {
-      id: "shopify",
-      title: "100xElevate Shopify Agency",
-      description:
-        "A landing page for a Shopify development agency with smooth animations and mobile-friendly design.",
-      image: "/100xelevate.png",
-      technologies: ["React.js", "TailwindCSS", "Framer Motion", "GSAP"],
-      demoUrl: "https://100xelevate.vercel.app/",
-      githubUrl: "https://github.com/HamzaXCodes/100xelevate",
-    },
+  
     {
       id: "text-to-speech",
       title: "Text to Speech",
