@@ -47,16 +47,6 @@ const Projects = () => {
     },
   
     {
-      id: "text-to-speech",
-      title: "Text to Speech",
-      description:
-        "Convert text to natural-sounding speech instantly with our easy, fast, and user-friendly TTS app.",
-      image: "/speech.png",
-      technologies: ["React.js", "TailwindCSS", "JavaScript"],
-      demoUrl: "https://text-speech-tool.vercel.app/",
-      githubUrl: "https://github.com/HamzaXCodes/text-speech-tool",
-    },
-    {
       id: "ecommerce",
       title: "E-commerce Website",
       description:
@@ -95,6 +85,17 @@ const Projects = () => {
       technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
       demoUrl: "https://hamzaxcodes.github.io/Devics.com/",
       githubUrl: "https://github.com/HamzaXCodes/Devics.com",
+    },
+
+     {
+      id: "text-to-speech",
+      title: "Text to Speech",
+      description:
+        "Convert text to natural-sounding speech instantly with our easy, fast, and user-friendly TTS app.",
+      image: "/speech.png",
+      technologies: ["React.js", "TailwindCSS", "JavaScript"],
+      demoUrl: "https://text-speech-tool.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/text-speech-tool",
     },
   ];
 
