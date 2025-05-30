@@ -5,15 +5,15 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const projects = [
-    {
-      id: "instagram",
-      title: "Instagram Video Downloader",
+       {
+      id: "youtube",
+      title: "Youtube to Mp4",
       description:
-        "Download Instagram videos easily in high quality with our fast, free, and user-friendly downloader tool.",
-      image: "/insta.png",
+        "Download YouTube videos as MP4 files instantly with our fast, free, and easy-to-use tool.",
+      image: "/youtubemp4.png",
       technologies: ["React.js", "Tailwind", "JavaScript"],
-      demoUrl: "https://instagram-video-downloader-bice.vercel.app/",
-      githubUrl: "https://github.com/HamzaXCodes/Instagram-video-downloader",
+      demoUrl: "https://you-tube-to-mp4-two.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/YouTube-to-Mp4",
     },
       {
       id: "shopify",
@@ -26,15 +26,16 @@ const Projects = () => {
       githubUrl: "https://github.com/HamzaXCodes/100xelevate",
     },
     {
-      id: "youtube",
-      title: "Youtube to Mp4",
+      id: "instagram",
+      title: "Instagram Video Downloader",
       description:
-        "Download YouTube videos as MP4 files instantly with our fast, free, and easy-to-use tool.",
-      image: "/youtubemp4.png",
+        "Download Instagram videos easily in high quality with our fast, free, and user-friendly downloader tool.",
+      image: "/insta.png",
       technologies: ["React.js", "Tailwind", "JavaScript"],
-      demoUrl: "https://you-tube-to-mp4-two.vercel.app/",
-      githubUrl: "https://github.com/HamzaXCodes/YouTube-to-Mp4",
+      demoUrl: "https://instagram-video-downloader-bice.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/Instagram-video-downloader",
     },
+    
     {
       id: "converter",
       title: "Image Converter Tool",
@@ -44,6 +45,16 @@ const Projects = () => {
       technologies: ["React.js", "Tailwind", "JavaScript"],
       demoUrl: "https://image-converter-tool-seven.vercel.app/",
       githubUrl: "https://github.com/HamzaXCodes/Image-Converter-Tool",
+    },
+    {
+      id: "youtube",
+      title: "Youtube to Mp3",
+      description:
+        "Download YouTube videos as MP3 files instantly with our fast, free, and easy-to-use tool.",
+      image: "/youtubemp3.png",
+      technologies: ["React.js", "Tailwind", "JavaScript"],
+      demoUrl: "https://youtube-to-mp3-flax.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/Youtube-to-mp3",
     },
   
     {
