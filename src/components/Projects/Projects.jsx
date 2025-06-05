@@ -6,6 +6,16 @@ const Projects = () => {
 
   const projects = [
        {
+      id: "word",
+      title: "Document Converter | Word to PDF & PDF to Word",
+      description:
+        "Easily convert your documents between Word and PDF formats with our free online tool.",
+      image: "/pdf.png",
+      technologies: ["React.js", "Tailwind", "JavaScript"],
+      demoUrl: "https://word-to-pdf-and-pdf-to-word.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/PDF-to-Word-And-Word-to-PDF-Converter-",
+    },
+       {
       id: "youtube",
       title: "Youtube to Mp4",
       description:
