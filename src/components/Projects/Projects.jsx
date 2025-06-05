@@ -6,7 +6,7 @@ const Projects = () => {
 
   const projects = [
        {
-      id: "word",
+      id: "wordtopdf",
       title: "Document Converter | Word to PDF & PDF to Word",
       description:
         "Easily convert your documents between Word and PDF formats with our free online tool.",
