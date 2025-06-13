@@ -22,7 +22,7 @@ const Projects = () => {
         "Download YouTube videos as MP4 files instantly with our fast, free, and easy-to-use tool.",
       image: "/youtubemp4.png",
       technologies: ["React.js", "Tailwind", "JavaScript"],
-      demoUrl: "https://you-tube-to-mp4-two.vercel.app/",
+      demoUrl: "https://you-tube-to-mp4-alpha.vercel.app/",
       githubUrl: "https://github.com/HamzaXCodes/YouTube-to-Mp4",
     },
       {

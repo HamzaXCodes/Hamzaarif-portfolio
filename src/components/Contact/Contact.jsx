@@ -51,27 +51,55 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitError("");
+    setSubmitSuccess(false);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+    try {
+      // Prepare form data for Web3Forms
+      const submitData = {
+        access_key: "e666e0e1-075c-4e61-9ea4-41fc03782ba9",
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(submitData)
       });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
+      const result = await response.json();
+      
+      if (response.status === 200) {
+        setSubmitSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      } else {
+        setSubmitError(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitError("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -277,7 +305,7 @@ const Contact = () => {
               className="overflow-hidden shadow-lg rounded-xl h-80"
               data-aos="zoom-in"
             >
-              <iframe
+              {/* <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217897.19486131293!2d74.18058331028969!3d31.483104197907182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1715684529981!5m2!1sen!2s"
                 width="100%"
                 height="100%"
@@ -286,7 +314,7 @@ const Contact = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Lahore, Pakistan Map"
-              />
+              /> */}
             </div>
           </div>
         </div>
