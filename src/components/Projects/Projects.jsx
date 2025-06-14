@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { DiJavascript } from "react-icons/di";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const Projects = () => {
@@ -35,6 +36,16 @@ const Projects = () => {
       demoUrl: "https://100xelevate.vercel.app/",
       githubUrl: "https://github.com/HamzaXCodes/100xelevate",
     },
+      {
+      id: "aiimage",
+      title: "AI Image Generator",
+      description:
+        "Generate high-quality, realistic images from text prompts using advanced AI and deep learning models.",
+      image: "/aiimage.png",
+      technologies: ["React.js", "TailwindCSS", "Javascript"],
+      demoUrl: "https://ai-image-generation-eta.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/AI-Image-Generation",
+    },
     {
       id: "instagram",
       title: "Instagram Video Downloader",
@@ -44,6 +55,16 @@ const Projects = () => {
       technologies: ["React.js", "Tailwind", "JavaScript"],
       demoUrl: "https://instagram-video-downloader-bice.vercel.app/",
       githubUrl: "https://github.com/HamzaXCodes/Instagram-video-downloader",
+    },
+     {
+      id: "weather",
+      title: "Weather APP",
+      description:
+        "Get real-time weather updates, forecasts, and alerts with a clean, responsive, and intuitive interface.",
+      image: "weather.png",
+      technologies: ["React.js", "TailwindCSS"],
+      demoUrl: "https://weather-app-beta-blue-19.vercel.app/",
+      githubUrl: "https://github.com/HamzaXCodes/Weather-App",
     },
     
     {
