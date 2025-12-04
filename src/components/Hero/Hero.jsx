@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center h-full overflow-hidden bg-hero-section"
+      className="relative flex items-center justify-center h-screen overflow-hidden bg-hero-section"
     >
       <div className="absolute inset-0 bg-light-surface/10 dark:bg-dark-bg/30" />
       <div className="container relative z-10 flex flex-col justify-center h-full px-4 py-20 mx-auto lg:px-6">
